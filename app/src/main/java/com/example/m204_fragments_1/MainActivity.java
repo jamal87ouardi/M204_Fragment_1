@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FragmentA fA = new FragmentA();
+
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.container, fA)
                 .commit();
@@ -24,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
+                FragmentB fb = new FragmentB();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.container,fb)
+                        .commit();
 
 
             }
